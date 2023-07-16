@@ -33,12 +33,49 @@ Here is a timeline of my experience:
 This is a list of my projects, with links to their GitHub repositories and photos.
 
 ## Mobile / Front End
-| Project Flutter 1 - Ok Skut             | Project Flutter 2 - Lib Book            |
-|-----------------------------------------|-----------------------------------------|
-| [![Project 1](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-1) <br> Description Project 1. Ok Skut is Application to Provide Book Scooter Electric. <br> Tech Stack <br> ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white). | [![Project 2](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-2) <br> Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. |
-|                                         |                                         |
-| [Demo](https://demo-url.com)             | [Demo](https://demo-url.com)             |
-| [Repository](https://github.com/username/project-1) | [Repository](https://github.com/username/project-2) |
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/username/project-1">
+        <img src="https://i.ibb.co/LhwdwhV/maneki.png" alt="Project 1" />
+      </a>
+      <br>
+      <b>Project Flutter 1 - Ok Skut</b>
+      <br>
+      Description Project 1. Ok Skut is Application to Provide Book Scooter Electric.
+      <br>
+      Tech Stack
+      <br>
+      ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+    </td>
+    <td>
+      <a href="https://github.com/username/project-2">
+        <img src="https://i.ibb.co/LhwdwhV/maneki.png" alt="Project 2" />
+      </a>
+      <br>
+      <b>Project Flutter 2 - Lib Book</b>
+      <br>
+      Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://demo-url.com">Demo</a>
+    </td>
+    <td>
+      <a href="https://demo-url.com">Demo</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/username/project-1">Repository</a>
+    </td>
+    <td>
+      <a href="https://github.com/username/project-2">Repository</a>
+    </td>
+  </tr>
+</table>
 
 ## Back End
 | Project 3                               | Project 4                               |
