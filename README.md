@@ -16,15 +16,34 @@ This is a list of my projects, with links to their GitHub repositories and photo
 
 ## Project 1
 
-[![Project 1](https://avatars.githubusercontent.com/u/12345678?v=4&s=40)](https://github.com/username/project-1)
-[![Project 2](https://avatars.githubusercontent.com/u/98765432?v=4&s=40)](https://github.com/username/project-2)
-[![Project 3](https://avatars.githubusercontent.com/u/65432109?v=4&s=40)](https://github.com/username/project-3)
+[![Project 1](https://avatars.githubusercontent.com/u/12345678?v=4&s=50)](https://github.com/username/project-1)
+Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 1](https://github.com/username/project-1)
+
+## Project 2
+
+[![Project 2](https://avatars.githubusercontent.com/u/98765432?v=4&s=50)](https://github.com/username/project-2)
+Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 2](https://github.com/username/project-2)
+
+## Project 3
+
+[![Project 3](https://avatars.githubusercontent.com/u/65432109?v=4&s=50)](https://github.com/username/project-3)
+Description of Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 3](https://github.com/username/project-3)
 
 ## Project 4
 
-[![Project 4](https://avatars.githubusercontent.com/u/10111213?v=4&s=40)](https://github.com/username/project-4)
-[![Project 5](https://avatars.githubusercontent.com/u/11121314?v=4&s=40)](https://github.com/username/project-5)
-[![Project 6](https://avatars.githubusercontent.com/u/12131415?v=4&s=40)](https://github.com/username/project-6)
+[![Project 4](https://avatars.githubusercontent.com/u/10111213?v=4&s=50)](https://github.com/username/project-4)
+Description of Project 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 4](https://github.com/username/project-4)
+
+## Project 5
+
+[![Project 5](https://avatars.githubusercontent.com/u/11121314?v=4&s=50)](https://github.com/username/project-5)
+Description of Project 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 5](https://github.com/username/project-5)
+
+## Project 6
+
+[![Project 6](https://avatars.githubusercontent.com/u/12131415?v=4&s=50)](https://github.com/username/project-6)
+Description of Project 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 6](https://github.com/username/project-6)
+
 
 # 📊GitHub Stats :
 ![](https://github-readme-stats.vercel.app/api?username=bits-io&theme=nightowl&hide_border=false&include_all_commits=true&count_private=false)
