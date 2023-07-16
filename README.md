@@ -12,15 +12,15 @@
 Here is a timeline of my work experience:
 
 * **2021-Present**
-    * Software Engineer at Google
+    * Software Engineer at ...
     * Developed and maintained software for Google's search engine
     * Worked on a team of engineers to improve the performance and scalability of the search engine
 * **2019-2021**
-    * Software Engineer at Microsoft
+    * Software Engineer at ...
     * Developed and maintained software for Microsoft's Azure cloud platform
     * Worked on a team of engineers to build new features for Azure
 * **2017-2019**
-    * Software Engineer at Amazon
+    * Software Engineer at ...
     * Developed and maintained software for Amazon's e-commerce platform
     * Worked on a team of engineers to improve the performance and scalability of the e-commerce platform
  
