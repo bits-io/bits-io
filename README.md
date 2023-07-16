@@ -14,9 +14,13 @@
 
 This is a list of my projects, with links to their GitHub repositories and photos.
 
+# My Projects
+
+This is a list of my projects, with links to their GitHub repositories and photos.
+
 ## Project 1
 
-[![Project 1](https://avatars.githubusercontent.com/u/12345678?v=4)](https://github.com/username/project-1)
+[![Project 1](https://avatars.githubusercontent.com/u/12345678?v=4&s=40)](https://github.com/username/project-1)
 
 * Project 1 is a simple web app that I built using React.
 * The app allows users to create and manage a list of tasks.
@@ -24,7 +28,7 @@ This is a list of my projects, with links to their GitHub repositories and photo
 
 ## Project 2
 
-[![Project 2](https://avatars.githubusercontent.com/u/98765432?v=4)](https://github.com/username/project-2)
+[![Project 2](https://avatars.githubusercontent.com/u/98765432?v=4&s=40)](https://github.com/username/project-2)
 
 * Project 2 is a Python script that I wrote to scrape data from a website.
 * The script collects data on the top 100 websites in the world.
@@ -33,7 +37,7 @@ This is a list of my projects, with links to their GitHub repositories and photo
 
 ## Project 3
 
-[![Project 3](https://avatars.githubusercontent.com/u/65432109?v=4)](https://github.com/username/project-3)
+[![Project 3](https://avatars.githubusercontent.com/u/65432109?v=4&s=40)](https://github.com/username/project-3)
 
 * Project 3 is a machine learning model that I trained to classify images.
 * The model can classify images of cats and dogs.
