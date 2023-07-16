@@ -78,20 +78,87 @@ This is a list of my projects, with links to their GitHub repositories and photo
 </table>
 
 ## Back End
-| Project 3                               | Project 4                               |
-|-----------------------------------------|-----------------------------------------|
-| [![Project 3](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-3) <br> Description of Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. | [![Project 4](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-4) <br> Description of Project 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. |
-|                                         |                                         |
-| [Demo](https://demo-url.com)             | [Demo](https://demo-url.com)             |
-| [Repository](https://github.com/username/project-3) | [Repository](https://github.com/username/project-4) |
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/username/project-3">
+        <img src="https://i.ibb.co/LhwdwhV/maneki.png" alt="Project 3" />
+      </a>
+      <br>
+      <b>Project 3</b>
+      <br>
+      Description of Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </td>
+    <td>
+      <a href="https://github.com/username/project-4">
+        <img src="https://i.ibb.co/LhwdwhV/maneki.png" alt="Project 4" />
+      </a>
+      <br>
+      <b>Project 4</b>
+      <br>
+      Description of Project 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://demo-url.com">Demo</a>
+    </td>
+    <td>
+      <a href="https://demo-url.com">Demo</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/username/project-3">Repository</a>
+    </td>
+    <td>
+      <a href="https://github.com/username/project-4">Repository</a>
+    </td>
+  </tr>
+</table>
 
 ## Machine Learning
-| Project 5                               | Project 6                               |
-|-----------------------------------------|-----------------------------------------|
-| [![Project 5](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-5) <br> Description of Project 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. | [![Project 6](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-6) <br> Description of Project 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. |
-|                                         |                                         |
-| [Demo](https://demo-url.com)             | [Demo](https://demo-url.com)             |
-| [Repository](https://github.com/username/project-5) | [Repository](https://github.com/username/project-6) |
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/username/project-5">
+        <img src="https://i.ibb.co/LhwdwhV/maneki.png" alt="Project 5" />
+      </a>
+      <br>
+      <b>Project 5</b>
+      <br>
+      Description of Project 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </td>
+    <td>
+      <a href="https://github.com/username/project-6">
+        <img src="https://i.ibb.co/LhwdwhV/maneki.png" alt="Project 6" />
+      </a>
+      <br>
+      <b>Project 6</b>
+      <br>
+      Description of Project 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://demo-url.com">Demo</a>
+    </td>
+    <td>
+      <a href="https://demo-url.com">Demo</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/username/project-5">Repository</a>
+    </td>
+    <td>
+      <a href="https://github.com/username/project-6">Repository</a>
+    </td>
+  </tr>
+</table>
+
 
 
 
