@@ -15,9 +15,9 @@
 This is a list of my projects, with links to their GitHub repositories and photos.
 
 ## Mobile / Front End
-| Project 1                                | Project 2                                |
+| Project Flutter 1 - Ok Skut             | Project FLutter 2 - Lib Book            |
 |-----------------------------------------|-----------------------------------------|
-| [![Project 1](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-1) Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 1](https://github.com/username/project-1) | [![Project 2](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-2) Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 2](https://github.com/username/project-2) |
+| [![Project 1](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-1) Description of Project 1. Ok Skut is Application to Provide Book Scooter Electric. Tech Stack ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white). [Link to Project 1](https://github.com/username/project-1) | [![Project 2](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-2) Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 2](https://github.com/username/project-2) |
 
 ## Back End
 | Project 1                                | Project 2                                |
