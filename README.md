@@ -14,15 +14,18 @@
 
 This is a list of my projects, with links to their GitHub repositories and photos.
 
+## Mobile / Front End
 | Project 1                                | Project 2                                |
 |-----------------------------------------|-----------------------------------------|
 | [![Project 1](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-1) Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 1](https://github.com/username/project-1) | [![Project 2](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-2) Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 2](https://github.com/username/project-2) |
 
-| Project 3                                | Project 4                                |
+## Back End
+| Project 1                                | Project 2                                |
 |-----------------------------------------|-----------------------------------------|
 | [![Project 3](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-3) Description of Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 3](https://github.com/username/project-3) | [![Project 4](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-4) Description of Project 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 4](https://github.com/username/project-4) |
 
-| Project 5                                | Project 6                                |
+## Machine Learning
+| Project 1                               | Project 2                                |
 |-----------------------------------------|-----------------------------------------|
 | [![Project 5](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-5) Description of Project 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 5](https://github.com/username/project-5) | [![Project 6](https://i.ibb.co/LhwdwhV/maneki.png)](https://github.com/username/project-6) Description of Project 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Link to Project 6](https://github.com/username/project-6) |
 
