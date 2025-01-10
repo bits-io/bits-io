@@ -36,32 +36,16 @@ Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@
 
 
 ## ⏳ Weekly Development Breakdown
-[![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?a5e44cc7-f680-4783-970d-de9c19fa9c0d=your-username&theme=nightowl&hide_border=false)](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d)
+[![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?a5e44cc7-f680-4783-970d-de9c19fa9c0d=a5e44cc7-f680-4783-970d-de9c19fa9c0d&theme=nightowl&hide_border=false)](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d)
 
 ## 📊 WakaTime Dashboard
 Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d).
 
 
-# 📊 Embeddable Charts
-### Total Time Tracked (WakaTime)
-![WakaTime Chart](https://wakatime.com/share/@a5e44cc7-f680-4783-970d-de9c19fa9c0d/1234abcd-5678-efgh-ijkl-9012mnop3456.svg)
-
-### Daily Activity
-![WakaTime Daily Activity](https://wakatime.com/share/@a5e44cc7-f680-4783-970d-de9c19fa9c0d/abcd1234-5678-efgh-ijkl-9012mnop3456.svg)
-
----
-
-# 💡 Insights
-- **Top Languages**: JavaScript, Python, PHP
-- **Most Active Days**: Monday, Thursday
-- **Focus Areas**: Backend development, API integration, cloud deployments
-
----
-
 # 🎥 Animated Preview (GIFs)
 ![Coding GIF](https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif)
 
----
+
 
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light)
