@@ -25,6 +25,15 @@
 ## 📊 WakaTime Dashboard
 Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d).
 
+## 📊 Contribution Graph
+[![Ashutosh's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=bits-io&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+## 🌟 Showcase
+![Coding](https://media.giphy.com/media/3o6ZsYhfu9sNml1gkI/giphy.gif)
+
+## 📊 Custom Stats
+![Languages](https://quickchart.io/chart?c={type:'doughnut',data:{labels:['JavaScript','Python','HTML'],datasets:[{data:[50,30,20]}]}})
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light)
 
