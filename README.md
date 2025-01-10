@@ -20,6 +20,7 @@
 ### ✍️Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light)
 
+<figure><embed src="https://wakatime.com/share/@a5e44cc7-f680-4783-970d-de9c19fa9c0d/1e86b8a9-9331-423a-bbe9-81e1bea80ab7.svg"></embed></figure>
 
 [![](https://visitcount.itsvg.in/api?id=bits-io&icon=0&color=11)](https://visitcount.itsvg.in)
 
