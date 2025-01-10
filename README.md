@@ -22,24 +22,12 @@
 ## ⏳ Weekly Development Breakdown
 [![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=a5e44cc7-f680-4783-970d-de9c19fa9c0d&theme=nightowl&hide_border=false)](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d)
 
-## 📊 WakaTime Dashboard
-Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d).
 
 ## 📊 Contribution Graph
 [![Ashutosh's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=bits-io&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=bits-io&theme=highcontrast)
-
 ## ⏳ Weekly Development Breakdown
 [![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?a5e44cc7-f680-4783-970d-de9c19fa9c0d=a5e44cc7-f680-4783-970d-de9c19fa9c0d&theme=nightowl&hide_border=false)](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d)
-
-## 📊 WakaTime Dashboard
-Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d).
-
-
-# 🎥 Animated Preview (GIFs)
-![Coding GIF](https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif)
-
 
 
 ### ✍️ Random Dev Quote
