@@ -36,40 +36,18 @@ Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@
 
 
 ## ⏳ Weekly Development Breakdown
-[![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=your-username&theme=nightowl&hide_border=false)](https://wakatime.com/@your-username)
+[![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?a5e44cc7-f680-4783-970d-de9c19fa9c0d=your-username&theme=nightowl&hide_border=false)](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d)
 
 ## 📊 WakaTime Dashboard
 Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@your-username).
 
----
-
-# 🎯 Goals
-| Goal                     | Status  |
-|---------------------------|---------|
-| Learn AWS                | 🔄 Ongoing |
-| Master Machine Learning  | 🚀 Progressing |
-| Publish Blog Articles    | ✅ Completed |
-| Create Open Source Repo  | 🕒 Planned |
-
----
-
-# 🚀 Repo & Project Badges
-### Repo Badges
-[![Repo Badge](https://img.shields.io/github/stars/bits-io/my-repo?style=social)](https://github.com/bits-io/my-repo)  
-[![Forks](https://img.shields.io/github/forks/bits-io/my-repo)](https://github.com/bits-io/my-repo/network/members)
-
-### Project Badges
-[![WakaTime Project](https://wakatime.com/badge/user/your-username/project-id.svg)](https://wakatime.com/@your-username/projects/project-id)  
-[![Code Quality](https://img.shields.io/codacy/grade/project-id)](https://app.codacy.com/gh/bits-io/my-repo)
-
----
 
 # 📊 Embeddable Charts
 ### Total Time Tracked (WakaTime)
-![WakaTime Chart](https://wakatime.com/share/@your-username/1234abcd-5678-efgh-ijkl-9012mnop3456.svg)
+![WakaTime Chart](https://wakatime.com/share/@a5e44cc7-f680-4783-970d-de9c19fa9c0d/1234abcd-5678-efgh-ijkl-9012mnop3456.svg)
 
 ### Daily Activity
-![WakaTime Daily Activity](https://wakatime.com/share/@your-username/abcd1234-5678-efgh-ijkl-9012mnop3456.svg)
+![WakaTime Daily Activity](https://wakatime.com/share/@a5e44cc7-f680-4783-970d-de9c19fa9c0d/abcd1234-5678-efgh-ijkl-9012mnop3456.svg)
 
 ---
 
