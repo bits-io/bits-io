@@ -22,6 +22,8 @@
 ## 📊 Contribution Graph
 [![Ashutosh's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=bits-io&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
+![GitHub Skyline](https://skyline.github.com/bits-io)
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light)
 
@@ -29,3 +31,4 @@
 
 ## 💰 Buy Me A Coffee
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bits)
+
