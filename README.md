@@ -22,9 +22,6 @@
 ## 📊 Contribution Graph
 [![Ashutosh's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=bits-io&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
-## ⏳ Weekly Development Breakdown
-[![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?a5e44cc7-f680-4783-970d-de9c19fa9c0d=a5e44cc7-f680-4783-970d-de9c19fa9c0d&theme=nightowl&hide_border=false)](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d)
-
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light)
 
