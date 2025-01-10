@@ -34,6 +34,57 @@ Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@
 ## 📊 Custom Stats
 ![Languages](https://quickchart.io/chart?c={type:'doughnut',data:{labels:['JavaScript','Python','HTML'],datasets:[{data:[50,30,20]}]}})
 
+
+## ⏳ Weekly Development Breakdown
+[![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=your-username&theme=nightowl&hide_border=false)](https://wakatime.com/@your-username)
+
+## 📊 WakaTime Dashboard
+Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@your-username).
+
+---
+
+# 🎯 Goals
+| Goal                     | Status  |
+|---------------------------|---------|
+| Learn AWS                | 🔄 Ongoing |
+| Master Machine Learning  | 🚀 Progressing |
+| Publish Blog Articles    | ✅ Completed |
+| Create Open Source Repo  | 🕒 Planned |
+
+---
+
+# 🚀 Repo & Project Badges
+### Repo Badges
+[![Repo Badge](https://img.shields.io/github/stars/bits-io/my-repo?style=social)](https://github.com/bits-io/my-repo)  
+[![Forks](https://img.shields.io/github/forks/bits-io/my-repo)](https://github.com/bits-io/my-repo/network/members)
+
+### Project Badges
+[![WakaTime Project](https://wakatime.com/badge/user/your-username/project-id.svg)](https://wakatime.com/@your-username/projects/project-id)  
+[![Code Quality](https://img.shields.io/codacy/grade/project-id)](https://app.codacy.com/gh/bits-io/my-repo)
+
+---
+
+# 📊 Embeddable Charts
+### Total Time Tracked (WakaTime)
+![WakaTime Chart](https://wakatime.com/share/@your-username/1234abcd-5678-efgh-ijkl-9012mnop3456.svg)
+
+### Daily Activity
+![WakaTime Daily Activity](https://wakatime.com/share/@your-username/abcd1234-5678-efgh-ijkl-9012mnop3456.svg)
+
+---
+
+# 💡 Insights
+- **Top Languages**: JavaScript, Python, PHP
+- **Most Active Days**: Monday, Thursday
+- **Focus Areas**: Backend development, API integration, cloud deployments
+
+---
+
+# 🎥 Animated Preview (GIFs)
+![Coding GIF](https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif)
+
+---
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light)
 
