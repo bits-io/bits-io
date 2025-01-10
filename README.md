@@ -31,9 +31,6 @@ Check out my full coding activity dashboard on [WakaTime](https://wakatime.com/@
 ## 🌟 Showcase
 ![Coding](https://media.giphy.com/media/3o6ZsYhfu9sNml1gkI/giphy.gif)
 
-## 📊 Custom Stats
-![Languages](https://quickchart.io/chart?c={type:'doughnut',data:{labels:['JavaScript','Python','HTML'],datasets:[{data:[50,30,20]}]}})
-
 
 ## ⏳ Weekly Development Breakdown
 [![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?a5e44cc7-f680-4783-970d-de9c19fa9c0d=a5e44cc7-f680-4783-970d-de9c19fa9c0d&theme=nightowl&hide_border=false)](https://wakatime.com/@a5e44cc7-f680-4783-970d-de9c19fa9c0d)
