@@ -21,6 +21,9 @@
 ## 📊 Contribution Graph
 [![Ashutosh's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=bits-io&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
+## Figure
+<figure><embed src="https://wakatime.com/share/@bits/e8cd9a75-693f-4d63-a804-dca6814a7233.svg"></embed></figure>
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light)
 
