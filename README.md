@@ -4,13 +4,35 @@
 
 ### Software Engineer · Backend Developer
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/m-dobith-syadad-riyadi)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/bits.io)
-[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@bits-io)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mdobithsr@gmail.com)
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bits)
+## 🌐 Connect With Me
 
-![Profile Views](https://visitcount.itsvg.in/api?id=bits-io&icon=0&color=11)
+<p align="center">
+
+<a href="https://linkedin.com/in/m-dobith-syadad-riyadi">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://instagram.com/bits.io">
+<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+</a>
+
+<a href="https://medium.com/@bits-io">
+<img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white"/>
+</a>
+
+<a href="mailto:mdobithsr@gmail.com">
+<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+<a href="https://buymeacoffee.com/bits">
+<img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"/>
+</a>
+
+</p>
+
+<p align="center">
+<img src="https://komarev.com/ghpvc/?username=bits-io&style=for-the-badge&color=0e75b6"/>
+</p>
 
 </div>
 
@@ -243,14 +265,15 @@ Implemented Codeigniter and MySQL for managing Waste, Customer, Savings, and Rep
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=bits-io&theme=nightowl&hide_border=false&include_all_commits=true&count_private=false)
+<img src="https://github-readme-stats.vercel.app/api?username=bits-io&show_icons=true&theme=nightowl&hide_border=true&include_all_commits=true" height="165"/>
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=bits-io&theme=nightowl&hide_border=false)
+<img src="https://streak-stats.demolab.com?user=bits-io&theme=nightowl&hide_border=true" height="165"/>
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=bits-io&theme=nightowl&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bits-io&layout=compact&theme=nightowl&hide_border=true" height="165"/>
 
 ### ✍️ Random Dev Quote
-![Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nightowl"/>
 
 </div>
 
