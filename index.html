@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>M Dobith Syadad Riyadi — Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+        --bg: #060810;
+        --bg2: #0d1117;
+        --bg3: #111827;
+        --accent: #00e5c3;
+        --accent2: #0084ff;
+        --accent3: #ff6b6b;
+        --text: #e2e8f0;
+        --muted: #64748b;
+        --border: rgba(0,229,195,0.15);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: 'Fira Code', monospace;
+        overflow-x: hidden;
+        }
+
+        /* NOISE OVERLAY */
+        body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 999;
+        opacity: 0.4;
+        }
+
+        /* GLOWING GRID BG */
+        .grid-bg {
+        background-image:
+            linear-gradient(rgba(0,229,195,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,229,195,0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+        }
+
+        /* NAV */
+        nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        backdrop-filter: blur(20px);
+        background: rgba(6,8,16,0.85);
+        border-bottom: 1px solid var(--border);
+        }
+
+        .nav-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        color: var(--muted);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--accent); }
+
+        /* HERO */
+        .hero-name {
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        line-height: 1;
+        letter-spacing: -0.02em;
+        }
+
+        .accent { color: var(--accent); }
+        .accent2 { color: var(--accent2); }
+        .accent3 { color: var(--accent3); }
+
+        .typed-cursor::after {
+        content: '|';
+        animation: blink 1s step-end infinite;
+        color: var(--accent);
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        /* SECTION HEADER */
+        .section-tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        border: 1px solid var(--border);
+        padding: 4px 12px;
+        border-radius: 2px;
+        display: inline-block;
+        }
+
+        .section-title {
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: clamp(1.6rem, 3vw, 2.5rem);
+        letter-spacing: -0.02em;
+        }
+
+        /* CARD */
+        .card {
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        transition: border-color 0.3s, transform 0.3s;
+        }
+        .card:hover {
+        border-color: rgba(0,229,195,0.4);
+        transform: translateY(-2px);
+        }
+
+        /* TIMELINE */
+        .timeline-line {
+        position: absolute;
+        left: 0;
+        top: 8px; bottom: 0;
+        width: 1px;
+        background: linear-gradient(to bottom, var(--accent), transparent);
+        }
+
+        .timeline-dot {
+        width: 10px; height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 2px solid var(--bg);
+        box-shadow: 0 0 10px var(--accent);
+        flex-shrink: 0;
+        }
+
+        /* SKILL BADGE */
+        .badge {
+        font-size: 0.65rem;
+        letter-spacing: 0.05em;
+        background: rgba(0,229,195,0.07);
+        border: 1px solid rgba(0,229,195,0.2);
+        color: var(--accent);
+        padding: 3px 10px;
+        border-radius: 2px;
+        white-space: nowrap;
+        }
+
+        .badge-blue {
+        background: rgba(0,132,255,0.07);
+        border-color: rgba(0,132,255,0.2);
+        color: var(--accent2);
+        }
+
+        .badge-red {
+        background: rgba(255,107,107,0.07);
+        border-color: rgba(255,107,107,0.2);
+        color: var(--accent3);
+        }
+
+        /* CERT ITEM */
+        .cert-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+        gap: 16px;
+        }
+        .cert-item:last-child { border-bottom: none; }
+
+        /* GLOW */
+        .glow-teal {
+        box-shadow: 0 0 40px rgba(0,229,195,0.08), inset 0 0 40px rgba(0,229,195,0.02);
+        }
+
+        /* FLOATING ORBS */
+        .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        pointer-events: none;
+        }
+
+        /* SCROLL ANIMATE */
+        .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+        /* DIVIDER */
+        hr.fancy {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--accent), transparent);
+        opacity: 0.3;
+        margin: 0;
+        }
+
+        .contact-link {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: color 0.2s;
+        }
+        .contact-link:hover { color: var(--accent); }
+
+        .progress-bar {
+        height: 2px;
+        background: rgba(0,229,195,0.12);
+        border-radius: 1px;
+        overflow: hidden;
+        }
+        .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+        border-radius: 1px;
+        width: 0;
+        transition: width 1.2s ease;
+        }
+    </style>
+</head>
+<body class="grid-bg">
+
+    <!-- ORBS -->
+    <div style="position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0">
+        <div class="orb" style="width:600px;height:600px;background:rgba(0,229,195,0.04);top:-200px;right:-200px;"></div>
+        <div class="orb" style="width:500px;height:500px;background:rgba(0,132,255,0.04);bottom:10%;left:-200px;"></div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;">
+            <span class="accent">&lt;</span>DSR<span class="accent">/&gt;</span>
+        </span>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#freelance" class="nav-link">Freelance</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#certifications" class="nav-link">Certs</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        </div>
+    </nav>
+
+    <div style="position:relative;z-index:1">
+
+        <!-- HERO -->
+        <section style="min-height:100vh;display:flex;align-items:center;padding:100px 24px 60px">
+        <div class="max-w-6xl mx-auto w-full">
+            <div style="margin-bottom:24px">
+            <span class="section-tag">// Available for opportunities</span>
+            </div>
+
+            <div class="hero-name" style="margin-bottom:16px">
+            <div>M DOBITH</div>
+            <div>SYADAD <span class="accent">RIYADI</span></div>
+            </div>
+
+            <div style="font-size:1.1rem;color:var(--muted);margin-bottom:40px;letter-spacing:0.05em">
+            <span class="accent2">const</span> role = <span class="accent">"Software Engineer"</span>
+            <span class="typed-cursor"></span>
+            </div>
+
+            <p style="max-width:600px;font-family:'Fira Code',monospace;font-size:0.82rem;line-height:1.9;color:#94a3b8;margin-bottom:48px">
+            A dedicated backend engineer with <span class="accent">4+ years</span> of experience designing scalable systems. 
+            Proficient in <span class="accent">PHP (Laravel)</span>, <span class="accent2">Python (FastAPI)</span>, 
+            <span class="accent">Golang</span>, <span class="accent2">Java (Spring Boot)</span>, and <span class="accent">NodeJS</span>. 
+            Passionate about clean architecture, CI/CD, and performance optimization.
+            </p>
+
+            <div class="flex flex-wrap gap-3" style="margin-bottom:48px">
+            <span class="badge">PHP / Laravel</span>
+            <span class="badge">Golang</span>
+            <span class="badge">Java Spring Boot</span>
+            <span class="badge badge-blue">NodeJS / NestJS</span>
+            <span class="badge badge-blue">Python / FastAPI</span>
+            <span class="badge badge-red">PostgreSQL</span>
+            <span class="badge badge-red">MongoDB</span>
+            <span class="badge">Docker / CI-CD</span>
+            <span class="badge badge-blue">REST API</span>
+            </div>
+
+            <div class="flex flex-wrap gap-6">
+            <a href="mailto:mdobithsr@gmail.com" class="contact-link" style="color:var(--accent)">
+                ✉ mdobithsr@gmail.com
+            </a>
+            <a href="tel:+6289621671126" class="contact-link">
+                ☏ +62-896-2167-1126
+            </a>
+            <a href="https://linkedin.com/in/m-dobith-syadad-riyadi" target="_blank" class="contact-link">
+                ⟶ LinkedIn
+            </a>
+            <span class="contact-link" style="pointer-events:none">
+                ⌖ Ciamis, West Java
+            </span>
+            </div>
+        </div>
+        </section>
+
+        <hr class="fancy">
+
+        <!-- SKILLS -->
+        <section id="about" class="max-w-6xl mx-auto px-6 py-24 fade-up">
+        <div style="margin-bottom:16px"><span class="section-tag">// Skills</span></div>
+        <h2 class="section-title" style="margin-bottom:48px">Tech Stack</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <div class="card glow-teal p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent);margin-bottom:12px">BACKEND LANGUAGES</div>
+            <div class="flex flex-wrap gap-2">
+                <span class="badge">PHP</span><span class="badge">Golang</span>
+                <span class="badge">Java</span><span class="badge">Python</span>
+                <span class="badge">NodeJS</span><span class="badge">TypeScript</span>
+            </div>
+            <div class="progress-bar" style="margin-top:16px"><div class="progress-fill" style="width:92%"></div></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent2);margin-bottom:12px">FRAMEWORKS</div>
+            <div class="flex flex-wrap gap-2">
+                <span class="badge badge-blue">Laravel</span>
+                <span class="badge badge-blue">Spring Boot</span>
+                <span class="badge badge-blue">Go Fiber</span>
+                <span class="badge badge-blue">FastAPI</span>
+                <span class="badge badge-blue">NestJS</span>
+                <span class="badge badge-blue">Express JS</span>
+                <span class="badge badge-blue">Flask</span>
+                <span class="badge badge-blue">Django</span>
+            </div>
+            <div class="progress-bar" style="margin-top:16px"><div class="progress-fill" style="width:88%"></div></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent3);margin-bottom:12px">DATABASES</div>
+            <div class="flex flex-wrap gap-2">
+                <span class="badge badge-red">MySQL</span>
+                <span class="badge badge-red">PostgreSQL</span>
+                <span class="badge badge-red">MongoDB</span>
+                <span class="badge badge-red">SQL Server</span>
+                <span class="badge badge-red">Redis</span>
+            </div>
+            <div class="progress-bar" style="margin-top:16px"><div class="progress-fill" style="width:85%"></div></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent);margin-bottom:12px">DEVOPS & TOOLS</div>
+            <div class="flex flex-wrap gap-2">
+                <span class="badge">Docker</span>
+                <span class="badge">CI/CD</span>
+                <span class="badge">GitHub Actions</span>
+                <span class="badge">VPS / Nginx</span>
+                <span class="badge">SSH</span>
+                <span class="badge">PM2</span>
+                <span class="badge">cPanel</span>
+            </div>
+            <div class="progress-bar" style="margin-top:16px"><div class="progress-fill" style="width:80%"></div></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent2);margin-bottom:12px">INTEGRATIONS</div>
+            <div class="flex flex-wrap gap-2">
+                <span class="badge badge-blue">Midtrans</span>
+                <span class="badge badge-blue">Xendit</span>
+                <span class="badge badge-blue">REST API</span>
+                <span class="badge badge-blue">EPROC</span>
+                <span class="badge badge-blue">Sequelize</span>
+            </div>
+            <div class="progress-bar" style="margin-top:16px"><div class="progress-fill" style="width:78%"></div></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent3);margin-bottom:12px">DATA & ML</div>
+            <div class="flex flex-wrap gap-2">
+                <span class="badge badge-red">TensorFlow</span>
+                <span class="badge badge-red">Scikit-learn</span>
+                <span class="badge badge-red">Selenium</span>
+                <span class="badge badge-red">BeautifulSoup</span>
+                <span class="badge badge-red">Puppeteer</span>
+                <span class="badge badge-red">Cheerio</span>
+            </div>
+            <div class="progress-bar" style="margin-top:16px"><div class="progress-fill" style="width:70%"></div></div>
+            </div>
+
+        </div>
+        </section>
+
+        <hr class="fancy">
+
+        <!-- WORK EXPERIENCE -->
+        <section id="experience" class="max-w-6xl mx-auto px-6 py-24 fade-up">
+        <div style="margin-bottom:16px"><span class="section-tag">// Work Experience</span></div>
+        <h2 class="section-title" style="margin-bottom:48px">Full-Time Positions</h2>
+
+        <div style="position:relative;padding-left:28px">
+            <div class="timeline-line"></div>
+
+            <!-- Job 1 -->
+            <div style="margin-bottom:40px">
+            <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px">
+                <div class="timeline-dot" style="margin-top:4px;margin-left:-34px"></div>
+                <div class="w-full card p-6">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+                    <div>
+                    <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem">Backend Developer</div>
+                    <div style="font-size:0.78rem;color:var(--accent)">PT. Bharata Internasional Pharmaceutical</div>
+                    </div>
+                    <span style="font-size:0.68rem;color:var(--muted);background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:2px;border:1px solid rgba(255,255,255,0.08)">Aug 2025 – Feb 2026</span>
+                </div>
+                <ul style="list-style:none;font-size:0.78rem;color:#94a3b8;line-height:2;margin-bottom:16px">
+                    <li>→ Backend specialization in Java Spring Boot (Finance) and Go Fiber (HRIS)</li>
+                    <li>→ Focused on scalable, high-performance system architecture</li>
+                    <li>→ Application deployment & server management via SSH in production environments</li>
+                </ul>
+                <div class="flex flex-wrap gap-2">
+                    <span class="badge">Java</span><span class="badge">Spring Boot</span>
+                    <span class="badge">Golang</span><span class="badge">Go Fiber</span>
+                    <span class="badge badge-red">MongoDB</span><span class="badge badge-red">PostgreSQL</span>
+                    <span class="badge badge-blue">VPS</span><span class="badge badge-blue">Node JS</span>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div style="margin-bottom:40px">
+            <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px">
+                <div class="timeline-dot" style="margin-top:4px;margin-left:-34px"></div>
+                <div class="w-full card p-6">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+                    <div>
+                    <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem">Software Engineer</div>
+                    <div style="font-size:0.78rem;color:var(--accent)">Inovasi Alfatih Maulana</div>
+                    </div>
+                    <span style="font-size:0.68rem;color:var(--muted);background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:2px;border:1px solid rgba(255,255,255,0.08)">Nov 2023 – Dec 2024</span>
+                </div>
+                <ul style="list-style:none;font-size:0.78rem;color:#94a3b8;line-height:2;margin-bottom:16px">
+                    <li>→ Maintained & optimized existing applications for performance and UX</li>
+                    <li>→ Built web apps for Events, Course & Blog using Laravel</li>
+                    <li>→ Created REST API for withdrawal processes with Express JS + Xendit</li>
+                    <li>→ CI/CD pipeline implementation via GitHub Actions + FTP deployment</li>
+                    <li>→ Data scraping with Python (Selenium, BeautifulSoup, FastAPI) and NodeJS (Puppeteer, Cheerio)</li>
+                </ul>
+                <div class="flex flex-wrap gap-2">
+                    <span class="badge">PHP</span><span class="badge">Laravel</span>
+                    <span class="badge badge-blue">NodeJS</span><span class="badge badge-blue">Express JS</span>
+                    <span class="badge badge-blue">Python</span><span class="badge badge-blue">FastAPI</span>
+                    <span class="badge badge-red">MySQL</span><span class="badge badge-red">PostgreSQL</span>
+                    <span class="badge badge-red">MongoDB</span>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Job 3 - ML Mentor -->
+            <div style="margin-bottom:40px">
+            <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px">
+                <div class="timeline-dot" style="margin-top:4px;margin-left:-34px;background:var(--accent2);box-shadow:0 0 10px var(--accent2)"></div>
+                <div class="w-full card p-6">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+                    <div>
+                    <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem">Machine Learning Mentor <span style="font-size:0.7rem;color:var(--accent2)">(Part-time)</span></div>
+                    <div style="font-size:0.78rem;color:var(--accent2)">Bangkit Academy — Google, Tokopedia, Gojek, Traveloka</div>
+                    </div>
+                    <span style="font-size:0.68rem;color:var(--muted);background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:2px;border:1px solid rgba(255,255,255,0.08)">Aug – Dec 2024</span>
+                </div>
+                <ul style="list-style:none;font-size:0.78rem;color:#94a3b8;line-height:2;margin-bottom:16px">
+                    <li>→ Mentoring a class group of 24 students in Machine Learning curriculum</li>
+                </ul>
+                <div class="flex flex-wrap gap-2">
+                    <span class="badge badge-blue">Google Slides</span><span class="badge badge-blue">Dicoding</span>
+                    <span class="badge badge-blue">Coursera</span><span class="badge badge-blue">Discord</span>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Job 4 - Internship -->
+            <div>
+            <div style="display:flex;align-items:flex-start;gap:16px">
+                <div class="timeline-dot" style="margin-top:4px;margin-left:-34px;background:var(--accent3);box-shadow:0 0 10px var(--accent3)"></div>
+                <div class="w-full card p-6">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+                    <div>
+                    <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem">Backend Developer <span style="font-size:0.7rem;color:var(--accent3)">(MSIB Internship)</span></div>
+                    <div style="font-size:0.78rem;color:var(--accent3)">PT. Media Kreasi Abadi</div>
+                    </div>
+                    <span style="font-size:0.68rem;color:var(--muted);background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:2px;border:1px solid rgba(255,255,255,0.08)">Aug – Dec 2022</span>
+                </div>
+                <ul style="list-style:none;font-size:0.78rem;color:#94a3b8;line-height:2;margin-bottom:16px">
+                    <li>→ Developed Attendance App with NodeJS/ExpressJS + Midtrans payment gateway</li>
+                    <li>→ Implemented RESTful API, CI/CD, manual testing, MySQL with Sequelize</li>
+                    <li>→ Deployed on VPS Ubuntu with Nginx, version control via Git</li>
+                    <li>→ Collaborated in a full Scrum team over 5-month hybrid environment</li>
+                </ul>
+                <div class="flex flex-wrap gap-2">
+                    <span class="badge badge-blue">NodeJS</span><span class="badge badge-blue">Express JS</span>
+                    <span class="badge badge-red">MySQL</span><span class="badge">Midtrans</span>
+                    <span class="badge">VPS</span><span class="badge">Nginx</span><span class="badge">Jira</span>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </section>
+
+        <hr class="fancy">
+
+        <!-- FREELANCE -->
+        <section id="freelance" class="max-w-6xl mx-auto px-6 py-24 fade-up">
+        <div style="margin-bottom:16px"><span class="section-tag">// Freelance</span></div>
+        <h2 class="section-title" style="margin-bottom:48px">Project Freelance</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="card p-6">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem">Backend Engineer — Cashier, Inventory</div>
+                <span style="font-size:0.65rem;color:var(--muted)">Jul 2023 – Feb 2026</span>
+            </div>
+            <div style="font-size:0.73rem;color:var(--accent);margin-bottom:10px">Relasi Symbio Solusi</div>
+            <p style="font-size:0.76rem;color:#94a3b8;line-height:1.8;margin-bottom:12px">Built and optimized a Laravel-MySQL application for cashier & inventory management, deployed on cPanel and VPS.</p>
+            <div class="flex flex-wrap gap-2"><span class="badge">Laravel</span><span class="badge badge-red">MySQL</span><span class="badge">VPS</span><span class="badge">Nginx</span></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem">Backend Engineer — Bermentor</div>
+                <span style="font-size:0.65rem;color:var(--muted)">Jan 2025 – Jul 2025</span>
+            </div>
+            <div style="font-size:0.73rem;color:var(--accent);margin-bottom:10px">Bermentor</div>
+            <p style="font-size:0.76rem;color:#94a3b8;line-height:1.8;margin-bottom:12px">Delivered a robust Laravel-MySQL solution with streamlined data operations, deployed on cPanel and VPS.</p>
+            <div class="flex flex-wrap gap-2"><span class="badge">Laravel</span><span class="badge badge-red">MySQL</span><span class="badge">cPanel</span><span class="badge">Nginx</span></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem">Backend Developer — New Vista</div>
+                <span style="font-size:0.65rem;color:var(--muted)">Jul 2024 – Jun 2025</span>
+            </div>
+            <div style="font-size:0.73rem;color:var(--accent2);margin-bottom:10px">Soedarpo Informatika</div>
+            <p style="font-size:0.76rem;color:#94a3b8;line-height:1.8;margin-bottom:12px">Developed a comprehensive app with Redis, TypeScript, NestJS, SQL Server, PostgreSQL, with EPROC integration.</p>
+            <div class="flex flex-wrap gap-2"><span class="badge badge-blue">NestJS</span><span class="badge badge-blue">TypeScript</span><span class="badge badge-red">Redis</span><span class="badge badge-red">SQL Server</span><span class="badge badge-red">PostgreSQL</span></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem">Backend Developer — Crew Management</div>
+                <span style="font-size:0.65rem;color:var(--muted)">Dec 2023 – Apr 2024</span>
+            </div>
+            <div style="font-size:0.73rem;color:var(--accent2);margin-bottom:10px">Samudera Daya Maritim</div>
+            <p style="font-size:0.76rem;color:#94a3b8;line-height:1.8;margin-bottom:12px">Built robust APIs with Laravel, Docker containerization, CI/CD pipelines, collaborated with CTO and 3 frontend devs.</p>
+            <div class="flex flex-wrap gap-2"><span class="badge">Laravel</span><span class="badge badge-red">PostgreSQL</span><span class="badge badge-blue">Docker</span><span class="badge badge-blue">GitHub Actions</span></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem">Backend Developer — Ngabsign App</div>
+                <span style="font-size:0.65rem;color:var(--muted)">Jan 2023 – Jan 2024</span>
+            </div>
+            <div style="font-size:0.73rem;color:var(--accent3);margin-bottom:10px">Ngabsign</div>
+            <p style="font-size:0.76rem;color:#94a3b8;line-height:1.8;margin-bottom:12px">Attendance app with NodeJS/ExpressJS + Midtrans. Led a remote full stack team as Tech Lead for 13 months.</p>
+            <div class="flex flex-wrap gap-2"><span class="badge badge-blue">NodeJS</span><span class="badge badge-blue">Express JS</span><span class="badge badge-red">MySQL</span><span class="badge">Midtrans</span><span class="badge">VPS</span></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem">Web Developer — Waste Bank Management</div>
+                <span style="font-size:0.65rem;color:var(--muted)">Jul 2023</span>
+            </div>
+            <div style="font-size:0.73rem;color:var(--accent3);margin-bottom:10px">Waste Bank in Tasikmalaya</div>
+            <p style="font-size:0.76rem;color:#94a3b8;line-height:1.8;margin-bottom:12px">Waste management system with features: Manage Waste, Customers, Savings, and Reports using CodeIgniter.</p>
+            <div class="flex flex-wrap gap-2"><span class="badge">PHP</span><span class="badge">CodeIgniter</span><span class="badge badge-red">MySQL</span></div>
+            </div>
+
+        </div>
+        </section>
+
+        <hr class="fancy">
+
+        <!-- EDUCATION -->
+        <section id="education" class="max-w-6xl mx-auto px-6 py-24 fade-up">
+        <div style="margin-bottom:16px"><span class="section-tag">// Education</span></div>
+        <h2 class="section-title" style="margin-bottom:48px">Education</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent3);margin-bottom:12px">2023 – 2024</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">Informatics Engineer</div>
+            <div style="font-size:0.76rem;color:var(--accent3);margin-bottom:12px">STIMIK Dharma Negara Bandung</div>
+            <p style="font-size:0.74rem;color:#64748b;line-height:1.8">Database design, Data Warehouse, Data Mining. Mathematical Logic & Calculus.</p>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent2);margin-bottom:12px">Feb – Jul 2023</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">Machine Learning Cohort</div>
+            <div style="font-size:0.76rem;color:var(--accent2);margin-bottom:12px">Bangkit Academy — Google, Gojek, Traveloka</div>
+            <p style="font-size:0.74rem;color:#64748b;line-height:1.8">IT Automation, Data Analytics, ML Specialization, TensorFlow. Capstone: Travel App with Itinerary & Weather Prediction (Nearest Neighbor + LSTM Bidirectional).</p>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent);margin-bottom:12px">Jul 2020 – Jul 2023</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">Informatics Management</div>
+            <div style="font-size:0.76rem;color:var(--accent);margin-bottom:12px">Polytechnic LP3I</div>
+            <p style="font-size:0.74rem;color:#64748b;line-height:1.8">Algorithm & Data Structure, OOP, System Design, Mobile & Web Framework, Software Testing.</p>
+            </div>
+
+        </div>
+        </section>
+
+        <hr class="fancy">
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="max-w-6xl mx-auto px-6 py-24 fade-up">
+        <div style="margin-bottom:16px"><span class="section-tag">// Licences & Certifications</span></div>
+        <h2 class="section-title" style="margin-bottom:48px">Certifications</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent2);margin-bottom:16px">DEEPLEARNING.AI</div>
+            <div class="cert-item"><span style="font-size:0.8rem">Machine Learning Specialization</span><span style="font-size:0.7rem;color:var(--muted)">May 2023</span></div>
+            <div class="cert-item"><span style="font-size:0.8rem">TensorFlow Developer</span><span style="font-size:0.7rem;color:var(--muted)">May 2023</span></div>
+            <div class="cert-item"><span style="font-size:0.8rem">TensorFlow: Data and Deployment</span><span style="font-size:0.7rem;color:var(--muted)">May 2023</span></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent);margin-bottom:16px">GOOGLE</div>
+            <div class="cert-item"><span style="font-size:0.8rem">Data Analytics</span><span style="font-size:0.7rem;color:var(--muted)">Apr 2023</span></div>
+            <div class="cert-item"><span style="font-size:0.8rem">IT Automation with Python</span><span style="font-size:0.7rem;color:var(--muted)">Apr 2023</span></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent3);margin-bottom:16px">BNSP (NATIONAL CERTIFICATION)</div>
+            <div class="cert-item"><span style="font-size:0.8rem">Junior Web Developer</span><span style="font-size:0.7rem;color:var(--muted)">Feb 2023</span></div>
+            <div class="cert-item"><span style="font-size:0.8rem">Database Administrator</span><span style="font-size:0.7rem;color:var(--muted)">May 2022</span></div>
+            <div class="cert-item"><span style="font-size:0.8rem">Computer Operator</span><span style="font-size:0.7rem;color:var(--muted)">Dec 2021</span></div>
+            </div>
+
+            <div class="card p-6">
+            <div style="font-size:0.65rem;letter-spacing:0.15em;color:var(--accent2);margin-bottom:16px">OTHERS</div>
+            <div class="cert-item"><span style="font-size:0.8rem">Scalable Web Service with Golang</span><span style="font-size:0.7rem;color:var(--muted)">Apr 2024 · Hacktiv8</span></div>
+            <div class="cert-item"><span style="font-size:0.8rem">Mathematics for Machine Learning</span><span style="font-size:0.7rem;color:var(--muted)">Mar 2023 · Imperial College</span></div>
+            <div class="cert-item"><span style="font-size:0.8rem">Belajar Pengembangan Machine Learning</span><span style="font-size:0.7rem;color:var(--muted)">Oct 2022 · Dicoding</span></div>
+            <div class="cert-item"><span style="font-size:0.8rem">Cloud Practitioner Essentials (AWS)</span><span style="font-size:0.7rem;color:var(--muted)">Aug 2021 · Dicoding</span></div>
+            </div>
+
+        </div>
+        </section>
+
+        <hr class="fancy">
+
+        <!-- ACHIEVEMENT + ORG -->
+        <section class="max-w-6xl mx-auto px-6 py-24 fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <div>
+            <div style="margin-bottom:16px"><span class="section-tag">// Achievement</span></div>
+            <h2 class="section-title" style="margin-bottom:32px">Achievement</h2>
+            <div class="card p-6 glow-teal">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+                <div style="font-family:'Syne',sans-serif;font-weight:700">INNO CAMP 2021</div>
+                <span style="font-size:0.68rem;color:var(--muted)">Jul 2022</span>
+                </div>
+                <div style="font-size:0.76rem;color:var(--accent);margin-bottom:12px">Adira Finance Corporate University</div>
+                <ul style="list-style:none;font-size:0.76rem;color:#94a3b8;line-height:2">
+                <li>🏆 Top 15 out of 200+ student teams in Indonesia</li>
+                <li>→ Design Thinking mentoring (Empathise → Test)</li>
+                <li>→ Created Business Model Innovation for Adira Finance</li>
+                </ul>
+            </div>
+            </div>
+
+            <div>
+            <div style="margin-bottom:16px"><span class="section-tag">// Organization</span></div>
+            <h2 class="section-title" style="margin-bottom:32px">Organization</h2>
+            <div class="card p-6">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+                <div style="font-family:'Syne',sans-serif;font-weight:700">LP3I Computer Club</div>
+                <span style="font-size:0.68rem;color:var(--muted)">Nov 2021 – Jul 2022</span>
+                </div>
+                <div style="font-size:0.76rem;color:var(--accent2);margin-bottom:12px">LP3I Polytechnic</div>
+                <ul style="list-style:none;font-size:0.76rem;color:#94a3b8;line-height:2">
+                <li>→ Created content for social media to enhance engagement</li>
+                <li>→ Documented events via photos, videos, and written content</li>
+                <li>→ Developed strategic social media content plans</li>
+                </ul>
+            </div>
+            </div>
+
+        </div>
+        </section>
+
+        <hr class="fancy">
+
+        <!-- CONTACT -->
+        <section id="contact" class="max-w-6xl mx-auto px-6 py-24 text-center fade-up">
+        <div style="margin-bottom:16px"><span class="section-tag">// Get in Touch</span></div>
+        <h2 class="section-title" style="margin-bottom:20px">Let's Work Together</h2>
+        <p style="font-size:0.82rem;color:var(--muted);max-width:480px;margin:0 auto 40px;line-height:1.9">
+            Open to new backend engineering opportunities, collaborations, or just a conversation about tech.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4" style="margin-bottom:48px">
+            <a href="mailto:mdobithsr@gmail.com" style="display:inline-flex;align-items:center;gap:10px;background:rgba(0,229,195,0.08);border:1px solid var(--border);color:var(--accent);padding:12px 24px;border-radius:3px;font-size:0.8rem;text-decoration:none;transition:all 0.2s;letter-spacing:0.05em"
+            onmouseover="this.style.background='rgba(0,229,195,0.15)'"
+            onmouseout="this.style.background='rgba(0,229,195,0.08)'">
+            ✉ mdobithsr@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/m-dobith-syadad-riyadi" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:rgba(0,132,255,0.08);border:1px solid rgba(0,132,255,0.2);color:var(--accent2);padding:12px 24px;border-radius:3px;font-size:0.8rem;text-decoration:none;transition:all 0.2s;letter-spacing:0.05em"
+            onmouseover="this.style.background='rgba(0,132,255,0.15)'"
+            onmouseout="this.style.background='rgba(0,132,255,0.08)'">
+            ⟶ LinkedIn Profile
+            </a>
+            <a href="tel:+6289621671126" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,107,107,0.08);border:1px solid rgba(255,107,107,0.2);color:var(--accent3);padding:12px 24px;border-radius:3px;font-size:0.8rem;text-decoration:none;transition:all 0.2s;letter-spacing:0.05em"
+            onmouseover="this.style.background='rgba(255,107,107,0.15)'"
+            onmouseout="this.style.background='rgba(255,107,107,0.08)'">
+            ☏ +62-896-2167-1126
+            </a>
+        </div>
+
+        <div style="font-size:0.7rem;color:rgba(100,116,139,0.6);letter-spacing:0.1em">
+            © 2026 M Dobith Syadad Riyadi — Built with precision
+        </div>
+        </section>
+
+    </div><!-- /z-index wrapper -->
+
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            // Animate progress bars
+            e.target.querySelectorAll('.progress-fill').forEach(bar => {
+                bar.style.width = bar.style.width;
+            });
+            }
+        });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Animate progress bars when in view
+        const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+            e.target.querySelectorAll('.progress-fill').forEach(bar => {
+                const target = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => { bar.style.width = target; }, 100);
+            });
+            }
+        });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.card').forEach(el => barObserver.observe(el));
+    </script>
+</body>
+</html>
